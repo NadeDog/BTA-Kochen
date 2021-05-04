@@ -1,0 +1,73 @@
+body{
+	margin:0;
+	font-family: Helvetica, Arial, sans-serif;
+	line-height:1.4;
+	color:white;
+}
+/*weißer Header mit Logo und Navigation*/
+header {
+	background-color:white;
+	height:64px;
+	padding:0;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:0 5px;
+}
+a{
+	color:black;
+	text-decoration:none;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+nav{
+	display:none;
+}
+.show{
+	display:block;
+}
+#logo{
+	height:40px;
+}
+#navigationsliste{
+	list-style-type: none;
+	padding:0;
+	display:flex;
+	justify-content: center;
+}
+#navigationsliste li{	/*selektiert alle li in dem Element mit dieser ID*/
+	margin-left:8px;
+}
+#menu{
+	background-color:none;
+	border:none;
+}
+/*Wir spielen mit flexboxen, auch wenn meine alten floats auch noch funktionieren ;)*/
+.intro{
+	background-image:url("img/intro.jpg");
+	background-color:none;
+	min-height:800px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+.buttonweiss{
+	background-color:white;
+	color:black;
+	height:50px;
+	width:250px;
+	text-transform:uppercase;
+	font-weight:350;
+	border-radius:8px;
+	box-shadow:0;
+}
+
+@media (min-width:992px){
+	#menu{
+		display:none;
+		}
+	nav{
+		display:block;
+	}
+}
