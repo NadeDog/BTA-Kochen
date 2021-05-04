@@ -2,7 +2,8 @@ body{
 	margin:0;
 	font-family: Helvetica, Arial, sans-serif;
 	line-height:1.4;
-	color:white;
+	color:black;
+	text-align:center
 }
 /*weißer Header mit Logo und Navigation*/
 header {
@@ -22,6 +23,10 @@ a{
 }
 nav{
 	display:none;
+}
+p{
+	text-align:justify;
+	margin-bottom:16px;
 }
 .show{
 	display:block;
@@ -43,24 +48,47 @@ nav{
 	border:none;
 }
 /*Wir spielen mit flexboxen, auch wenn meine alten floats auch noch funktionieren ;)*/
-.intro{
+#hero{
 	background-image:url("img/intro.jpg");
-	background-color:none;
-	min-height:800px;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-color:red;
+	height:100vh;	/*100vh = viewport height (quasi %)*/
 	display:flex;
 	flex-direction:column;
 	justify-content:center;
 	align-items:center;
+	color:white;
 }
-.buttonweiss{
+.btn{
+	display:inline-block;
 	background-color:white;
-	color:black;
-	height:50px;
-	width:250px;
-	text-transform:uppercase;
-	font-weight:350;
-	border-radius:8px;
-	box-shadow:0;
+	color:#374a67;
+	font-weight:bold;
+	border-radius:5px;
+	margin-top:16px;
+	box-shadow:2px 2px 5px 0px #374a67;
+	text-align:center;
+	padding:16px;
+	border: #374a67 solid 2px;
+	transition:all 0.4s;	/*Animation - für die Dauer von 0,4s - empfohlen vom UI*/
+}
+.btn:hover{
+	background-color:#374a67;
+	color:white;
+	border-color:white;
+}
+.card{
+	width:100vw;
+	margin-bottom:64px;
+}
+.card .btn{
+	background-color:#374a67;
+	color:white;
+}
+.card img{
+	width:100vw;
 }
 
 @media (min-width:992px){
@@ -69,5 +97,18 @@ nav{
 		}
 	nav{
 		display:block;
+	}
+	.container{
+		display:flex;
+		flex-direction:columns;
+		justify-content:space-around;
+		
+	}
+	.card {
+		margin:8px;
+		max-width:20vw;
+	} 
+	.card img{
+	max-width:20vw;
 	}
 }
