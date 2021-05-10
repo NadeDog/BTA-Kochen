@@ -9,6 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="author" content="NadeDog"/>
 		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="fonts/icons.css">
 	</head>
 	<body>
 		<header>
@@ -16,7 +17,7 @@
 			<button id="menu">
 				<img src="img/menu.svg" alt="Menü" height="40"/>
 			</button>
-			<nav>
+			<nav id="navtop">
 				<ul id="navigationsliste">
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Rezepte</a></li>
@@ -65,10 +66,41 @@
 				<h2>Kein Rezept mehr verpassen</h2>
 				<h3>Hol dir unseren Newsletter</h3>
 				<form action="">
-					<input type="email" name="email" id="signin" value="Deine Emailadresse"/>
+					<input 
+						type="email" name="email" id="signin"
+						placeholder="Deine Emailadresse"
+					/>
 					<button type="submit" class="btn">Abonnieren</button>
 				</form>
 		</aside>
 			<script src="js/menu.js"></script>
+		<footer>
+			<nav id="navimp">
+				<ul id="ulimp">
+					<li>
+					<a href="#">Impressum</a>
+					</li>
+					<li>
+					<a href="#">Datenschutz</a>
+					</li>
+					<li>
+					<a href="#">Kontakt</a>
+					</li>
+				</ul>
+			</nav>
+			<nav id="navsom">
+				<ul id="ulsom">
+					<li class="icon-facebook">
+						<a href="https://www.facebook.com"target="_blank"></a>
+					</li>
+					<li class="icon-instagram">
+						<a href="https://www.instagram.com" target="_blank"></a>
+					</li>
+					<li class="icon-youtube">
+						<a href="https://www.youtube.com" target="_blank"></a>
+					</li>
+				</ul>
+			<nav>
+		</footer>
 	</body>
 </html>

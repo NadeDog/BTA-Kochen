@@ -1,3 +1,6 @@
+*{
+	box-sizing:border-box;
+}
 body{
 	margin:0;
 	font-family: Helvetica, Arial, sans-serif;
@@ -9,14 +12,13 @@ body{
 /*weißer Header mit Logo und Navigation*/
 header {
 	background-color:white;
-	height:64px;
+	height:64px;	
 	width:100%;
-	padding:5px;
 	display:flex;
 	justify-content:space-between;
 	align-items:center;
 	padding:0 5px;
-	position:fixed
+	position:fixed;
 }
 a{
 	color:black;
@@ -44,17 +46,30 @@ h3{
 }
 .show{
 	display:block;
+	position:absolute;
+	background:white;
+	top:64px;
+	right:0;
+	width:100%;
+}
+.show ul{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+.show ul li{
+	margin:5px;
 }
 #logo{
 	height:40px;
 }
-#navigationsliste{
+nav ul{
 	list-style-type: none;
 	padding:0;
 	display:flex;
 	justify-content: center;
 }
-#navigationsliste li{	/*selektiert alle li in dem Element mit dieser ID*/
+nav li{	/*selektiert alle li in dem Element innerhalb einer nav*/
 	margin-left:8px;
 }
 #menu{
@@ -135,13 +150,13 @@ h3{
 	margin-left:0px;
 	border-radius: 0 5px 5px 0;
 	box-shadow:none;
-	height:2.5em;
-	padding:0.5em;
+	height:2.9rem;
+	padding:0.5rem;
 }
 #signin{
-	height:2em;
-	padding:0;
-	width:15em;
+	height:2.5rem;
+	width:15rem;
+	border:0;
 	border-radius:5px  0 0 5px;
 	margin-right:0;
 }
@@ -150,6 +165,30 @@ form{
 	align-items:center;
 	justify-content:center;
 }
+
+footer{
+	height:4rem;
+	color:black;	
+}
+footer nav{	
+	display:flex;
+	justify-content:center;
+}
+#ulimp{
+	flex-direction:column;
+	align-content:center;
+}
+#ulsom{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	font-size:2rem;
+}
+#ulsom li{
+	padding-left:0.5rem;
+	padding-right:0.5rem;
+}
+
 @media (min-width:992px){
 	#menu{
 		display:none;
@@ -164,4 +203,15 @@ form{
 	.card{
 		width:25%;
 	}
+	footer{			
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+		padding-left:2rem;
+		padding-right:2rem;
+	}
+	#ulimp{
+		flex-direction:row;
+	}
+	
 }
